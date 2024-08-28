@@ -1,6 +1,4 @@
 from django.shortcuts import render
-from django.http import HttpResponse
-# Create your views here.
 
 def helloWord(request):
-    return HttpResponse("Holaa Siuu")
+    return render(request,'signup.html')
