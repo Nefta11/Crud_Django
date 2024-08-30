@@ -5,6 +5,11 @@ def home(request):
     return render(request,'home.html')
 
 def signup(request):
-    return render(request,'signup.html',{
-        'form':UserCreationForm
-    })
+        if request.method == 'GET':
+            print('Enviando formulario')
+        else:
+            print(request.POST)
+            print('Obteniendo datos')
+        return render(request,'signup.html',{
+            'form':UserCreationForm
+        })
